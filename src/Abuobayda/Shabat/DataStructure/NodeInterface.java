@@ -18,5 +18,9 @@ public interface NodeInterface<T> {
     //return the item from a particular node
     public T getItem();
     
+    public void setPrev(ListNode p);
+    public ListNode getPrev();
+            
+    
     
 }
