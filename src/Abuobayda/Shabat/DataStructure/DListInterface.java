@@ -8,7 +8,7 @@ package Abuobayda.Shabat.DataStructure;
  *
  * @author Abuobayda Shabat
  */
-public interface SListInterface<T> {
+public interface DListInterface<T> {
     public void addToFront(T item);
     public T removeFront();
     public void addToBack(T item);

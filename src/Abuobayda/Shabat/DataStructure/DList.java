@@ -8,29 +8,50 @@ package Abuobayda.Shabat.DataStructure;
  *
  * @author Abuobyda Shabat
  */
-public class SList<T> implements SListInterface<T> {
+public class DList<T> implements DListInterface<T> {
+    //pointer to the first node
     ListNode head;
+    //pointer to the last node
+    ListNode tail;
+    //the num of items in the list
     int numOfItem;
     
-    SList(){
+    DList(){
         head = null;
+        tail=null;
         numOfItem = 0;
     }
 
     @Override
     public void addToFront(T item) {
-        head = new ListNode(item,head);
+        if(!isEmpty())
+        {
+            ListNode temp = new ListNode(item, head, null);
+            head.setPrev(temp);
+            head = temp;
+        }
+        else{
+            head= new ListNode(item, null,null);
+            tail =head;
+        }
         numOfItem++;
     }
 
     @Override
     public T removeFront() {
         T value = null;
-        if(!isEmpty()){
+        if(!isEmpty())
+        {
             value = (T) head.getItem();
-            head = head.getNext();
+            numOfItem--;
+            if(head == tail){   
+                head=tail= null;
+            }
+            else{
+                head = head.getNext();
+                head.setPrev(null);
+            }
         }
-        numOfItem--;
         return value;
     }
 

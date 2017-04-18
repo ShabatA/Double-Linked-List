@@ -16,7 +16,21 @@ public class MainClass {
     public static void main(String[] args) {
         // TODO code application logic here
       
-        SListInterface<Integer> myList = new SList<Integer>();
+        DListInterface<Integer> myList = new DList<Integer>();
+        
+        System.out.println("============Testing addFront method=======");
+        myList.addToFront(4);
+        myList.addToFront(6);
+        myList.display();
+        
+        System.out.println("==========Testing removeFront=============");
+        int val = myList.removeFront();
+        System.out.println("Value of the removed node: "+ val);
+        myList.display();
+        int val2 = myList.removeFront();
+        System.out.println("Value of the removed node: "+ val2);
+        myList.display();
+        /**
         System.out.println("==========Testing addToBack method===============");
         myList.addToBack(10);
         myList.addToBack(20);
@@ -34,16 +48,12 @@ public class MainClass {
         System.out.println("==========Testing clear method=======");
         myList.clear();
         System.out.println("Numer of Items in the List: "+ myList.numOfItems());
+        */
         
-        System.out.println("============Testing addFront method=======");
-        myList.addToFront(4);
-        myList.addToFront(6);
-        myList.display();
-        
-        System.out.println("==========Testing removeFront=============");
-        val = myList.removeFront();
-        System.out.println("Value of the removed node: "+ val);
-        myList.display();
+
+
+
+        /**
         System.out.println("num of items: "+ myList.numOfItems());
         
         System.out.println("========Testing contain methods=======");
@@ -55,6 +65,6 @@ public class MainClass {
             System.out.println("Value have been found: "+ target.getItem());
             
         }
-        
+        */
     }
 }
