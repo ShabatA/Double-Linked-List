@@ -50,17 +50,12 @@ public class MainClass {
         myList.addToBack(10);
         myList.display();
 
-        
-        
-        /**
         System.out.println("=========Testing numOfItems method========");
         System.out.println("Number Of Item in the List: "+ myList.numOfItems());
         
         System.out.println("==========Testing clear method=======");
         myList.clear();
         System.out.println("Numer of Items in the List: "+ myList.numOfItems());
-        */
-        
 
 
 

@@ -78,6 +78,7 @@ public class DList<T> implements DListInterface<T> {
             if(head==tail){
                 value = (T) head.getItem();  
                 head=tail= null;
+                numOfItem--;
             }
             else{
                 value = (T) tail.getItem();
@@ -109,12 +110,12 @@ public class DList<T> implements DListInterface<T> {
 
     @Override
     public boolean isEmpty() {
-        return head==null;
+        return (head==null&&tail==null);
     }
 
     @Override
     public void clear() {
-        head = null;
+        head = tail = null;
         numOfItem=0;
     }
 
