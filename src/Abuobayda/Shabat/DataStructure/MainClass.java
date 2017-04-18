@@ -59,18 +59,5 @@ public class MainClass {
 
 
 
-        /**
-        System.out.println("num of items: "+ myList.numOfItems());
-        
-        System.out.println("========Testing contain methods=======");
-        ListNode target = myList.contain(4);
-        if (target.equals(null)){
-            System.out.println("Not Found");
-        }
-        else {
-            System.out.println("Value have been found: "+ target.getItem());
-            
-        }
-        */
     }
 }
